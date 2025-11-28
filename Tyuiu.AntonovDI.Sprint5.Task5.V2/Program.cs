@@ -31,6 +31,6 @@ internal class Program
         Console.WriteLine("***************************************************************************");
 
         double res = ds.LoadFromDataFile(path);
-        Console.WriteLine("Результат выполнения программы: " + res);
+        Console.WriteLine("Результат выполнения программы: " + res); 
     }
 }
