@@ -25,7 +25,7 @@ internal class Program
 
         string path = @"C:\DataSprint5\InPutDataFileTask5V2.txt";
         Console.WriteLine("Данные находятся в файле: " + path);
-
+         
         Console.WriteLine("***************************************************************************");
         Console.WriteLine("* РЕЗУЛЬТАТ:                                                              *");
         Console.WriteLine("***************************************************************************");

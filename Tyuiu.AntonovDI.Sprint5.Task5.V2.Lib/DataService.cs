@@ -6,22 +6,28 @@ namespace Tyuiu.AntonovDI.Sprint5.Task5.V2.Lib
     {
         public double LoadFromDataFile(string path)
         {
-            double res = 0;
+            double sum = 0;
             int count = 0;
+            int f;
+
             using (StreamReader reader = new StreamReader(path))
             {
                 string line;
                 while ((line = reader.ReadLine()) != null)
                 {
-                    if (Convert.ToDouble(line) > 0)
+                    line = line.Replace(",", "");
+                    int[] a = line.Split(' ').Select(int.Parse).ToArray();
+                    for (int i = 0; i < a.Length; i++)
                     {
-                        res += Convert.ToDouble(line);
-                        count++;
+                        if (Convert.ToInt32(a[i]) > 0)
+                        {
+                            sum += Convert.ToInt32(a[i]);
+                            count++;
+                        }
                     }
                 }
             }
-            double sred = Math.Round(res / count, 3);
-            return sred;
+            return Math.Round((sum / count), 3);
         }
     }
 }
